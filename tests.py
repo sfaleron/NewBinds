@@ -5,8 +5,8 @@ from newbinds import NewBinds
 
 
 def test1():
-    x     = 14
-    y     = 3
+    x        = 14
+    y        = 3
 
     newBinds = NewBinds(locals())
 
