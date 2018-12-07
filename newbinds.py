@@ -3,9 +3,10 @@ class NewBinds(object):
     """Copy a dictionary, while retaining only updates.
 
     The intended purpose of this class is to simplify the code
-    creating attribute dictionaries for class factories, but it
+    creating attribute dictionaries for class construction, but it
     would also work anywhere else a lot of bindings which include
-    function definitions are bundled into a dictionary.
+    function or class definitions (values that aren't expressions) are
+    bundled into a dictionary.
 
     Example usage: the locals dictionary is passed at instantiation,
     additional bindings are made, and then the instance is called with
