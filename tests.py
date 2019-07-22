@@ -1,6 +1,4 @@
 
-from __future__ import absolute_import
-
 from newbinds import NewBinds
 
 
@@ -36,4 +34,3 @@ def test1():
 
 if __name__ == '__main__':
     test1()
-
