@@ -9,7 +9,7 @@ def test1():
 
     attrs    = dict(_x=x)
 
-    newBinds = NewBinds(locals())
+    binder = NewBinds(locals())
 
     def __init__(self, n):
         self._foo = self._x * self._y * n
@@ -18,7 +18,7 @@ def test1():
     def theAnswer(self):
         return self._foo
 
-    attrs.update(newBinds(locals()))
+    attrs.update(binder(locals()))
 
     attrs.update(_y=y)
 
@@ -27,7 +27,7 @@ def test1():
 
     assert hasattr(Foo, 'x') == False
     assert hasattr(Foo, 'z') == False
-    assert hasattr(Foo, 'newBinds') == False
+    assert hasattr(Foo, 'binder') == False
     assert hasattr(Foo, 'theAnswer') == True
     assert foo.theAnswer == x*y*z
 

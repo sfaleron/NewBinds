@@ -15,11 +15,6 @@ class NewBinds(object):
     bindings that were not present at instantiation. Bindings to the
     instance are also omitted.
 
-    To add bindings to an existing dictionary, create a new one, then
-    update the first with it.
-
-    d1.update(d2)
-
     The set of excluded symbols is accessible via the "excludedBinds"
     property and may be revised."""
 
